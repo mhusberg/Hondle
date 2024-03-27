@@ -1,2 +1,2 @@
 # Hondle
-Whats better than Dotadle? FOUR!!!
+Whats better than Dota2dle? FOUR!!!
