@@ -1,0 +1,19 @@
+[
+    {
+      "Name": "Andromeda",
+      "Attribute": "agility",
+      "Role": "support initiator",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy"
+    },
+    {
+      "Name": "Flint_Beastwood",
+      "Attribute": "agility",
+      "Role": "carry",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "Image": "./images/hero_icons/Flint_Beastwood.webp"
+    }
+  ]
