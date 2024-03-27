@@ -5,15 +5,44 @@
       "Role": "support initiator",
       "Side": "legion",
       "RangeType": "ranged",
-      "Complexity": "easy"
+      "Complexity": "easy",
+      "ImagePath": "./images/hero_icons/Andromeda.webp"
     },
     {
-      "Name": "Flint_Beastwood",
+      "Name": "Flint Beastwood",
       "Attribute": "agility",
       "Role": "carry",
       "Side": "hellbourne",
       "RangeType": "ranged",
       "Complexity": "easy",
-      "Image": "./images/hero_icons/Flint_Beastwood.webp"
+      "ImagePath": "./images/hero_icons/Flint_Beastwood.webp"
+    },  
+    {
+      "Name": "Engineer",
+      "Attribute": "agility",
+      "Role": "support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "./images/hero_icons/Engineer.webp"
+    },
+    {
+      "Name": "Moon Queen",
+      "Attribute": "agility",
+      "Role": "carry",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "./images/hero_icons/Moon_Queen.webp"
+    },
+    {
+      "Name": "Night Hound",
+      "Attribute": "agility",
+      "Role": "carry",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "./images/hero_icons/Night_Hound.webp"
     }
+
   ]
