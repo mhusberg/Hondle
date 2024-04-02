@@ -43,6 +43,77 @@
       "RangeType": "melee",
       "Complexity": "easy",
       "ImagePath": "./images/hero_icons/Night_Hound.webp"
+    },
+    {
+      "Name": "Arachna",
+      "Attribute": "agility",
+      "Role": "carry midlane",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "./images/hero_icons/Arachna.webp"
+    },
+    {
+      "Name": "Blood Hunter",
+      "Attribute": "agility",
+      "Role": "carry midlane",
+      "Side": "hellbourne",
+      "RangeType": "meele",
+      "Complexity": "easy",
+      "ImagePath": "./images/hero_icons/Blood_Hunter.webp"
+    },
+    {
+      "Name": "Chronos",
+      "Attribute": "agility",
+      "Role": "carry",
+      "Side": "hellbourne",
+      "RangeType": "meele",
+      "Complexity": "medium",
+      "ImagePath": "./images/hero_icons/Chronos.webp"
+    },
+    {
+      "Name": "Corrupted Disciple",
+      "Attribute": "agility",
+      "Role": "carry",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "./images/hero_icons/Corrupted_Disciple.webp"
+    },
+    {
+      "Name": "Dampeer",
+      "Attribute": "agility",
+      "Role": "carry midlane",
+      "Side": "hellbourne",
+      "RangeType": "meele",
+      "Complexity": "medium",
+      "ImagePath": "./images/hero_icons/Dampeer.webp"
+    },
+    {
+      "Name": "Forsaken Archer",
+      "Attribute": "agility",
+      "Role": "carry solo",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "./images/hero_icons/Forsaken_Archer.webp"
+    },
+    {
+      "Name": "Monkey King",
+      "Attribute": "agility",
+      "Role": "carry midlane",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "hard",
+      "ImagePath": "./images/hero_icons/Monkey_King.webp"
+    },
+    {
+      "Name": "Emerald Warden",
+      "Attribute": "agility",
+      "Role": "carry midlane",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "./images/hero_icons/Emerald_Warden.webp"
     }
-
   ]
