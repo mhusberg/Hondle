@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#history {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-row {
+  display: flex
+}
+
+.card {
+  background-color: rgba(128, 128, 128, 0.678);
+  margin-right: 40%;
+  margin-left: 40%;
+}
