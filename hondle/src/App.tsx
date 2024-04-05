@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import heroesData from './heroes.json'
+import SearchBar from './components/SearchBar';
+import Form from 'react-bootstrap/Form';
 import { Serializer } from 'v8';
 
 type Hero = {
@@ -82,8 +85,8 @@ const App = () => {
     <div className="bg">
       <div className="App">
           <h1>Heroes of Newerth Wordle</h1>
-          <form onSubmit={handleGuessSubmit}>
-            <input type="text" value={guess} onChange={handleGuessChange} placeholder="Search hero..." />
+          <Form onSubmit={handleGuessSubmit}>
+            <SearchBar onChange={handleGuessChange} value={guess} placeholder="Search hero..."></SearchBar>
             <button type="submit">Guess</button>
             {filteredHeroes.length > 0 && (
             <div className="filtered-heroes">
@@ -95,7 +98,7 @@ const App = () => {
               ))}
             </div>
           )}
-          </form>
+          </Form>
       <div className="card">
           {feedback && <p>{feedback}</p>}
           <div className="hero-history">
