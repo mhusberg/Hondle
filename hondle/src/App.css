@@ -3,7 +3,7 @@
 }
 
 .bg {
-  background-image: url(./images/hon_background.jpg);
+  background-image: url(hon_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

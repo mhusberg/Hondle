@@ -6,7 +6,7 @@
       "Side": "legion",
       "RangeType": "ranged",
       "Complexity": "easy",
-      "ImagePath": "./images/hero_icons/Andromeda.webp"
+      "ImagePath": "/images/hero_icons/Andromeda.webp"
     },
     {
       "Name": "Flint Beastwood",
@@ -15,7 +15,7 @@
       "Side": "hellbourne",
       "RangeType": "ranged",
       "Complexity": "easy",
-      "ImagePath": "./images/hero_icons/Flint_Beastwood.webp"
+      "ImagePath": "/images/hero_icons/Flint_Beastwood.webp"
     },  
     {
       "Name": "Engineer",
@@ -24,7 +24,7 @@
       "Side": "legion",
       "RangeType": "ranged",
       "Complexity": "medium",
-      "ImagePath": "./images/hero_icons/Engineer.webp"
+      "ImagePath": "/images/hero_icons/Engineer.webp"
     },
     {
       "Name": "Moon Queen",
@@ -33,7 +33,7 @@
       "Side": "legion",
       "RangeType": "ranged",
       "Complexity": "easy",
-      "ImagePath": "./images/hero_icons/Moon_Queen.webp"
+      "ImagePath": "/images/hero_icons/Moon_Queen.webp"
     },
     {
       "Name": "Night Hound",
@@ -42,7 +42,7 @@
       "Side": "legion",
       "RangeType": "melee",
       "Complexity": "easy",
-      "ImagePath": "./images/hero_icons/Night_Hound.webp"
+      "ImagePath": "/images/hero_icons/Night_Hound.webp"
     },
     {
       "Name": "Arachna",
@@ -51,25 +51,25 @@
       "Side": "hellbourne",
       "RangeType": "ranged",
       "Complexity": "easy",
-      "ImagePath": "./images/hero_icons/Arachna.webp"
+      "ImagePath": "/images/hero_icons/Arachna.webp"
     },
     {
       "Name": "Blood Hunter",
       "Attribute": "agility",
       "Role": "carry midlane",
       "Side": "hellbourne",
-      "RangeType": "meele",
+      "RangeType": "melee",
       "Complexity": "easy",
-      "ImagePath": "./images/hero_icons/Blood_Hunter.webp"
+      "ImagePath": "/images/hero_icons/Blood_Hunter.webp"
     },
     {
       "Name": "Chronos",
       "Attribute": "agility",
       "Role": "carry",
       "Side": "hellbourne",
-      "RangeType": "meele",
+      "RangeType": "melee",
       "Complexity": "medium",
-      "ImagePath": "./images/hero_icons/Chronos.webp"
+      "ImagePath": "/images/hero_icons/Chronos.webp"
     },
     {
       "Name": "Corrupted Disciple",
@@ -78,16 +78,16 @@
       "Side": "hellbourne",
       "RangeType": "ranged",
       "Complexity": "medium",
-      "ImagePath": "./images/hero_icons/Corrupted_Disciple.webp"
+      "ImagePath": "/images/hero_icons/Corrupted_Disciple.webp"
     },
     {
       "Name": "Dampeer",
       "Attribute": "agility",
       "Role": "carry midlane",
       "Side": "hellbourne",
-      "RangeType": "meele",
+      "RangeType": "melee",
       "Complexity": "medium",
-      "ImagePath": "./images/hero_icons/Dampeer.webp"
+      "ImagePath": "/images/hero_icons/Dampeer.webp"
     },
     {
       "Name": "Forsaken Archer",
@@ -96,7 +96,7 @@
       "Side": "hellbourne",
       "RangeType": "ranged",
       "Complexity": "medium",
-      "ImagePath": "./images/hero_icons/Forsaken_Archer.webp"
+      "ImagePath": "/images/hero_icons/Forsaken_Archer.webp"
     },
     {
       "Name": "Monkey King",
@@ -105,7 +105,7 @@
       "Side": "legion",
       "RangeType": "melee",
       "Complexity": "hard",
-      "ImagePath": "./images/hero_icons/Monkey_King.webp"
+      "ImagePath": "/images/hero_icons/Monkey_King.webp"
     },
     {
       "Name": "Emerald Warden",
@@ -114,6 +114,6 @@
       "Side": "legion",
       "RangeType": "ranged",
       "Complexity": "easy",
-      "ImagePath": "./images/hero_icons/Emerald_Warden.webp"
+      "ImagePath": "/images/hero_icons/Emerald_Warden.webp"
     }
   ]
