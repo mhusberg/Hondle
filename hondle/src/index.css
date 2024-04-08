@@ -39,6 +39,7 @@ code {
 .hero-img-search {
   height: 40px;
   width: 40px;
+  margin-right: 6px;
 }
 
 .hero-search {
@@ -69,4 +70,18 @@ code {
   max-height: 100%;
   display: block;
   margin: 0 auto; /* Center the image horizontally */
+}
+
+.hero-searchbar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-right: 40%;
+  margin-left: 40%;
+}
+
+
+.hero-list-group {
+  max-height: 500px;
+  overflow-y: auto;
 }
