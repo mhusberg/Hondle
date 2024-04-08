@@ -11,7 +11,7 @@
     {
       "Name": "Flint Beastwood",
       "Attribute": "agility",
-      "Role": "carry",
+      "Role": "carry midlane",
       "Side": "hellbourne",
       "RangeType": "ranged",
       "Complexity": "easy",
@@ -20,7 +20,7 @@
     {
       "Name": "Engineer",
       "Attribute": "agility",
-      "Role": "support",
+      "Role": "support initiator",
       "Side": "legion",
       "RangeType": "ranged",
       "Complexity": "medium",
