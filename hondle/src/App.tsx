@@ -41,7 +41,7 @@ const App = () => {
   const [guess, setGuess] = useState('');
   const [feedback, setFeedback] = useState('');
   const [guessHistory, setGuessHistory] = useState<Hero[]>([]);
-  const [guessedHistoryList, setGuessedHistoryList] = useState<Hero[]>(heroes);
+  const [remainingHeroes, setGuessedHistoryList] = useState<Hero[]>(heroes);
   const [inputValue, setInputValue] = useState("");
 
   const handleGuessChange = (value: string) => {
@@ -74,7 +74,7 @@ const App = () => {
       setFeedback('Congratulations! You guessed the hero correctly!');
     } else {
       setFeedback('Sorry, that\'s not the correct hero.');
-      setGuessedHistoryList(guessedHistoryList.filter(item => item.Name !== guess));
+      setGuessedHistoryList(remainingHeroes.filter(item => item.Name !== guess));
     }
   };
 
@@ -97,7 +97,7 @@ const handleInputReset = () => {
           <img className="hon-logo" src="./images/HoN_logo.png"></img>
           <form onSubmit={handleGuessSubmit}>
             <div className="hero-searchbar">
-              <HeroSearchBar onSelect={handleGuessChange} value={inputValue} setValue={setInputValue} heroes={guessedHistoryList}></HeroSearchBar>
+              <HeroSearchBar onSelect={handleGuessChange} value={inputValue} setValue={setInputValue} heroes={remainingHeroes}></HeroSearchBar>
             </div>
             <Button className="btn my-3" variant="success" type="submit" onClick={handleInputReset}>Guess</Button>
           </form>
