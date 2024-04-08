@@ -41,6 +41,7 @@ const App = () => {
   const [guessedHistoryList, setGuessedHistoryList] = useState<Hero[]>(heroes);
 
   const handleGuessChange = (value: string) => {
+    console.log(value)
     const searchTerm = value.trim();
     setGuess(searchTerm);
   };
@@ -72,16 +73,17 @@ const App = () => {
     setGuess('');
     setFeedback('');
     setGuessHistory([]);
+    setGuessedHistoryList(heroes);
   };
   return (
     <div className="bg">
       <div className="App">
-          <h1>Heroes of Newerth Wordle</h1>
+          <img className="hon-logo" src="./images/HoN_logo.png"></img>
           <form onSubmit={handleGuessSubmit}>
             <div className="hero-searchbar">
               <HeroSearchBar onSelect={handleGuessChange} placeholder="Search hero..." heroes={guessedHistoryList}></HeroSearchBar>
             </div>
-            <Button variant="success" type="submit" >Guess</Button>
+            <Button className="btn my-3" variant="success" type="submit" >Guess</Button>
           </form>
       <div className="card">
           {feedback && <p>{feedback}</p>}
