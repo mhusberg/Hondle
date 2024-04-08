@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import heroesData from './heroes.json'
-import SearchBar from './components/SearchBar';
-import Form from 'react-bootstrap/Form';
+import HeroSearchBar from './components/HeroSearchBar';
+import Button from 'react-bootstrap/Button';
 import { Serializer } from 'v8';
 
-type Hero = {
+export type Hero = {
   Name: string,
   Attribute: string,
   Role: string,
@@ -27,7 +27,7 @@ const heroes: Hero[] = heroesData.map((hero) => ({
 
 
 // Sample list of heroes from Heroes of Newerth
-//const heroess = ['Accursed', 'Aluna', 'Arachna', 'Artillery', 'Balphagore', 'Behemoth', 'Blacksmith', 'Bombardier', 'Bramble', 'Bubbles', 'Cthulhuphant', 'Demented Shaman', 'Devourer', 'Doctor Repulsor', 'Draconis', 'Empath', 'Engineer', 'Fayde', 'Flux', 'Forsaken Archer', 'Gauntlet', 'Geomancer', 'Glacius', 'Gravekeeper', 'Gunblade', 'Hellbringer', 'Keeper of the Forest', 'Kinesis', 'Kraken', 'Lodestone', 'Lord Salforis', 'Magmus', 'Martyr', 'Master of Arms', 'Midas', 'Moon Queen', 'Monarch', 'Moraxus', 'Myrmidon', 'Nighthound', 'Nitro', 'Nomad', 'Oogie', 'Parallax', 'Pandamonium', 'Pebbles', 'Pharaoh', 'Plague Rider', 'Pollywog Priest', 'Predator', 'Puppet Master', 'Pyromancer', 'Rally', 'Ravenor', 'Revenant', 'Rhapsody', 'Sand Wraith', 'Scout', 'Silhouette', 'Sir Benzington', 'Soulstealer', 'Swiftblade', 'Tarot', 'Tempest', 'The Gladiator', 'The Madman', 'Thunderbringer', 'Tremble', 'Tundra', 'Valkyrie', 'Vindicator', 'Voodoo Jester', 'War Beast', 'Wildsoul', 'Witch Slayer', 'Zephyr'];
+// const heroess = ['Accursed', 'Aluna', 'Arachna', 'Artillery', 'Balphagore', 'Behemoth', 'Blacksmith', 'Bombardier', 'Bramble', 'Bubbles', 'Cthulhuphant', 'Demented Shaman', 'Devourer', 'Doctor Repulsor', 'Draconis', 'Empath', 'Engineer', 'Fayde', 'Flux', 'Forsaken Archer', 'Gauntlet', 'Geomancer', 'Glacius', 'Gravekeeper', 'Gunblade', 'Hellbringer', 'Keeper of the Forest', 'Kinesis', 'Kraken', 'Lodestone', 'Lord Salforis', 'Magmus', 'Martyr', 'Master of Arms', 'Midas', 'Moon Queen', 'Monarch', 'Moraxus', 'Myrmidon', 'Nighthound', 'Nitro', 'Nomad', 'Oogie', 'Parallax', 'Pandamonium', 'Pebbles', 'Pharaoh', 'Plague Rider', 'Pollywog Priest', 'Predator', 'Puppet Master', 'Pyromancer', 'Rally', 'Ravenor', 'Revenant', 'Rhapsody', 'Sand Wraith', 'Scout', 'Silhouette', 'Sir Benzington', 'Soulstealer', 'Swiftblade', 'Tarot', 'Tempest', 'The Gladiator', 'The Madman', 'Thunderbringer', 'Tremble', 'Tundra', 'Valkyrie', 'Vindicator', 'Voodoo Jester', 'War Beast', 'Wildsoul', 'Witch Slayer', 'Zephyr'];
 
 const generateRandomHero = (): Hero => {
   const randomIndex = Math.floor(Math.random() * heroes.length);
@@ -38,21 +38,11 @@ const App = () => {
   const [guess, setGuess] = useState('');
   const [feedback, setFeedback] = useState('');
   const [guessHistory, setGuessHistory] = useState<Hero[]>([]);
-  const [filteredHeroes, setFilteredHeroes] = useState<Hero[]>([]);
+  const [guessedHistoryList, setGuessedHistoryList] = useState<Hero[]>(heroes);
 
-  const handleGuessChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = event.target.value.trim();
+  const handleGuessChange = (value: string) => {
+    const searchTerm = value.trim();
     setGuess(searchTerm);
-
-    // Filter heroes based on the search term
-    if (searchTerm !== '') {
-      const filtered = heroes.filter(hero =>
-        hero.Name.toLowerCase().startsWith(searchTerm.toLowerCase())
-      );
-      setFilteredHeroes(filtered);
-    } else {
-      setFilteredHeroes([]);
-    }
   };
 
   const handleGuessSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -73,8 +63,10 @@ const App = () => {
       setFeedback('Congratulations! You guessed the hero correctly!');
     } else {
       setFeedback('Sorry, that\'s not the correct hero.');
+      setGuessedHistoryList(guessedHistoryList.filter(item => item.Name !== guess));
     }
   };
+
   const handleNewGame = () => {
     setTargetHero(generateRandomHero());
     setGuess('');
@@ -85,20 +77,12 @@ const App = () => {
     <div className="bg">
       <div className="App">
           <h1>Heroes of Newerth Wordle</h1>
-          <Form onSubmit={handleGuessSubmit}>
-            <SearchBar onChange={handleGuessChange} value={guess} placeholder="Search hero..."></SearchBar>
-            <button type="submit">Guess</button>
-            {filteredHeroes.length > 0 && (
-            <div className="filtered-heroes">
-              {filteredHeroes.map(hero => (
-                <div key={hero.Name} onClick={() => setGuess(hero.Name)} className="hero-search">
-                  <img src={hero.ImagePath} alt={hero.Name} className="hero-img-search"/>
-                  <div>{hero.Name}</div>
-                </div>
-              ))}
+          <form onSubmit={handleGuessSubmit}>
+            <div className="hero-searchbar">
+              <HeroSearchBar onSelect={handleGuessChange} placeholder="Search hero..." heroes={guessedHistoryList}></HeroSearchBar>
             </div>
-          )}
-          </Form>
+            <Button variant="success" type="submit" >Guess</Button>
+          </form>
       <div className="card">
           {feedback && <p>{feedback}</p>}
           <div className="hero-history">
