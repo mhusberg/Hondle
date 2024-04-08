@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import heroesData from './heroes.json'
@@ -34,11 +34,15 @@ const generateRandomHero = (): Hero => {
   return heroes[randomIndex];
 };
 const App = () => {
+  useEffect(() => {
+    document.body.style.backgroundColor = '#212529';
+  })
   const [targetHero, setTargetHero] = useState(generateRandomHero());
   const [guess, setGuess] = useState('');
   const [feedback, setFeedback] = useState('');
   const [guessHistory, setGuessHistory] = useState<Hero[]>([]);
   const [guessedHistoryList, setGuessedHistoryList] = useState<Hero[]>(heroes);
+  const [inputValue, setInputValue] = useState("");
 
   const handleGuessChange = (value: string) => {
     console.log(value)
@@ -53,6 +57,12 @@ const App = () => {
   
     if (!guessedHeroObject) {
       setFeedback('Sorry, that hero was not found.');
+      return;
+    }
+
+    const isHeroInGuessHistory = guessHistory.some(hero => hero.Name === guessedHeroObject.Name);
+    if (isHeroInGuessHistory) {
+      setFeedback("Already guessed this hero.")
       return;
     }
   
@@ -74,16 +84,22 @@ const App = () => {
     setFeedback('');
     setGuessHistory([]);
     setGuessedHistoryList(heroes);
+    handleInputReset();
   };
+
+const handleInputReset = () => {
+  setInputValue("");
+};
+
   return (
     <div className="bg">
       <div className="App">
           <img className="hon-logo" src="./images/HoN_logo.png"></img>
           <form onSubmit={handleGuessSubmit}>
             <div className="hero-searchbar">
-              <HeroSearchBar onSelect={handleGuessChange} placeholder="Search hero..." heroes={guessedHistoryList}></HeroSearchBar>
+              <HeroSearchBar onSelect={handleGuessChange} value={inputValue} setValue={setInputValue} heroes={guessedHistoryList}></HeroSearchBar>
             </div>
-            <Button className="btn my-3" variant="success" type="submit" >Guess</Button>
+            <Button className="btn my-3" variant="success" type="submit" onClick={handleInputReset}>Guess</Button>
           </form>
       <div className="card">
           {feedback && <p>{feedback}</p>}
