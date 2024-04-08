@@ -1,9 +1,14 @@
 .App {
   text-align: center;
+  background-color: #484848aa;
+  width: 40vw;
 }
 
 .bg {
   background-image: url(hon_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
 }
