@@ -3,10 +3,15 @@ import React from 'react';
 
 const PropertiesCard = ({ content, colorClass }:{
     content: string;
-    colorClass: "success" | "partial" | "fail";
+    colorClass: string;
 
 }) => {
     
+    const toFirstLetterUpperCase = (word: string) => {
+        const upperWord = word[0].toUpperCase() + word.slice(1);
+        return upperWord;
+    }
+
     const addComma = content.replace(" ", ", ");
     const words = addComma.split(" ");
 
@@ -14,7 +19,7 @@ const PropertiesCard = ({ content, colorClass }:{
         <div className={`properties-card ${colorClass}`}>
             <div className="properties-card-content">
                 {words.map((word, index) => (
-                    <div key={index}>{word}</div>
+                    <div key={index}>{toFirstLetterUpperCase(word)}</div>
                 ))}
             </div>
         </div>
