@@ -12,8 +12,8 @@ const PropertiesCard = ({ content, colorClass }:{
         return upperWord;
     }
 
-    const addComma = content.replace(" ", ", ");
-    const words = addComma.split(" ");
+    const addComma = content.split(" ").join(", ");
+    const words = addComma.split(" ")
 
     return (
         <div className={`properties-card ${colorClass}`}>

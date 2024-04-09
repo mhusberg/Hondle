@@ -13,7 +13,7 @@
       "Name": "Flint Beastwood",
       "Gender": "male",
       "Attribute": "agility",
-      "Role": "carry midlane",
+      "Role": "carry mid",
       "Side": "hellbourne",
       "RangeType": "ranged",
       "Complexity": "easy",
@@ -22,7 +22,7 @@
     {
       "Name": "Engineer",
       "Gender": "male",
-      "Attribute": "intelligence",
+      "Attribute": "agility",
       "Role": "support initiator",
       "Side": "legion",
       "RangeType": "ranged",
@@ -53,7 +53,7 @@
       "Name": "Arachna",
       "Gender": "female",
       "Attribute": "agility",
-      "Role": "carry midlane",
+      "Role": "carry mid",
       "Side": "hellbourne",
       "RangeType": "ranged",
       "Complexity": "easy",
@@ -63,7 +63,7 @@
       "Name": "Blood Hunter",
       "Gender": "male",
       "Attribute": "agility",
-      "Role": "carry midlane",
+      "Role": "carry mid",
       "Side": "hellbourne",
       "RangeType": "melee",
       "Complexity": "easy",
@@ -93,7 +93,7 @@
       "Name": "Dampeer",
       "Gender": "male",
       "Attribute": "agility",
-      "Role": "carry midlane",
+      "Role": "carry mid",
       "Side": "hellbourne",
       "RangeType": "melee",
       "Complexity": "medium",
@@ -113,7 +113,7 @@
       "Name": "Monkey King",
       "Gender": "male",
       "Attribute": "agility",
-      "Role": "carry midlane",
+      "Role": "carry midl",
       "Side": "legion",
       "RangeType": "melee",
       "Complexity": "hard",
@@ -123,10 +123,820 @@
       "Name": "Emerald Warden",
       "Gender": "male",
       "Attribute": "agility",
-      "Role": "carry midlane",
+      "Role": "carry mid",
       "Side": "legion",
       "RangeType": "ranged",
       "Complexity": "easy",
       "ImagePath": "/images/hero_icons/Emerald_Warden.webp"
+    },
+    {
+      "Name": "Nomad",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry mid",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Nomad.webp"
+    },
+    {
+      "Name": "Scout",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry solo",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Scout.webp"
+    },
+    {
+      "Name": "Silhouette",
+      "Gender": "female",
+      "Attribute": "agility",
+      "Role": "carry mid solo",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "hard",
+      "ImagePath": "/images/hero_icons/Silhouette.webp"
+    },
+    {
+      "Name": "Swiftblade",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Swiftblade.webp"
+    },
+    {
+      "Name": "Valkyrie",
+      "Gender": "female",
+      "Attribute": "agility",
+      "Role": "carry mid solo",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Valkyrie.webp"
+    },
+    {
+      "Name": "Sand Wraith",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Sand_Wraith.webp"
+    },
+    {
+      "Name": "Slither",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "support pusher",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Slither.webp"
+    },
+    {
+      "Name": "Soulstealer",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry mid",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Soulstealer.webp"
+    },
+    {
+      "Name": "Wildsoul",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry jungle solo",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "hard",
+      "ImagePath": "/images/hero_icons/Wildsoul.webp"
+    },
+    {
+      "Name": "Zephyr",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry jungle",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Zephyr.webp"
+    },
+    {
+      "Name": "The Dark Lady",
+      "Gender": "female",
+      "Attribute": "agility",
+      "Role": "carry",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/The_Dark_Lady.webp"
+    },
+    {
+      "Name": "The Madman",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry solo",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/The_Madman.webp"
+    },
+    {
+      "Name": "Tremble",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry mid",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Tremble.webp"
+    },
+    {
+      "Name": "Aluna",
+      "Gender": "female",
+      "Attribute": "intelligence",
+      "Role": "mid support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Aluna.webp"
+    },
+    {
+      "Name": "Blacksmith",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Blacksmith.webp"
+    },
+    {
+      "Name": "Bubbles",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid solo initiator",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Bubbles.webp"
+    },
+    {
+      "Name": "Bombardier",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Bombardier.webp"
+    },
+    {
+      "Name": "Empath",
+      "Gender": "female",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Empath.webp"
+    },
+    {
+      "Name": "Kinesis",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Kinesis.webp"
+    },
+    {
+      "Name": "Martyr",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Martyr.webp"
+    },
+    {
+      "Name": "Defiler",
+      "Gender": "female",
+      "Attribute": "intelligence",
+      "Role": "mid pusher",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Defiler.webp"
+    },
+    {
+      "Name": "Demented Shaman",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Demented_Shaman.webp"
+    },
+    {
+      "Name": "Doctor Repulsor",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "hard",
+      "ImagePath": "/images/hero_icons/Doctor_Repulsor.webp"
+    },
+    {
+      "Name": "Fayde",
+      "Gender": "female",
+      "Attribute": "intelligence",
+      "Role": "mid",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Fayde.webp"
+    },
+    {
+      "Name": "Glacius",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Glacius.webp"
+    },
+    {
+      "Name": "Gravekeeper",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid pusher",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Gravekeeper.webp"
+    },
+    {
+      "Name": "Midas",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid solo",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Midas.webp"
+    },
+    {
+      "Name": "Monarch",
+      "Gender": "female",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Monarch.webp"
+    },
+    {
+      "Name": "Nymphora",
+      "Gender": "female",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Nymphora.webp"
+    },
+    {
+      "Name": "Ophelia",
+      "Gender": "female",
+      "Attribute": "intelligence",
+      "Role": "support jungler pusher",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "hard",
+      "ImagePath": "/images/hero_icons/Ophelia.webp"
+    },
+    {
+      "Name": "Pyromancer",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Pyromancer.webp"
+    },
+    {
+      "Name": "Pollywog Priest",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid support pusher",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Pollywog_Priest.webp"
+    },
+    {
+      "Name": "Hellbringer",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "support initiator",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Hellbringer.webp"
+    },
+    {
+      "Name": "Myrmidon",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Myrmidon.webp"
+    },
+    {
+      "Name": "Parasite",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "jungler",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Parasite.webp"
+    },
+    {
+      "Name": "Plague Rider",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "support solo",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Plague_Rider.webp"
+    },
+    {
+      "Name": "Puppet Master",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "carry mid",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Puppet_Master.webp"
+    },
+    {
+      "Name": "Tempest",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "jungler initiator",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Tempest.webp"
+    },
+    {
+      "Name": "The Chipper",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/The_Chipper.webp"
+    },
+    {
+      "Name": "Thunderbringer",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Thunderbringer.webp"
+    },
+    {
+      "Name": "Vindicator",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Vindicator.webp"
+    },
+    {
+      "Name": "Witch Slayer",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Witch_Slayer.webp"
+    },
+    {
+      "Name": "Soul Reaper",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid carry",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Soul_Reaper.webp"
+    },
+    {
+      "Name": "Succubus",
+      "Gender": "female",
+      "Attribute": "intelligence",
+      "Role": "mid support",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Succubus.webp"
+    },
+    {
+      "Name": "Torturer",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "mid pusher",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Torturer.webp"
+    },
+    {
+      "Name": "Wretched Hag",
+      "Gender": "female",
+      "Attribute": "intelligence",
+      "Role": "mid solo",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Torturer.webp"
+    },
+    {
+      "Name": "Voodoo Jester",
+      "Gender": "male",
+      "Attribute": "intelligence",
+      "Role": "support",
+      "Side": "hellbourne",
+      "RangeType": "ranged",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Voodoo_Jester.webp"
+    },
+    {
+      "Name": "Armadon",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "solo offlane",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Armadon.webp"
+    },
+    {
+      "Name": "Behemoth",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "support initiator",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Behemoth.webp"
+    },
+    {
+      "Name": "Drunken Master",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "carry mid",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "hard",
+      "ImagePath": "/images/hero_icons/Drunken_Master.webp"
+    },
+    {
+      "Name": "Flux",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid initiator",
+      "Side": "legion",
+      "RangeType": "ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Flux.webp"
+    },
+    {
+      "Name": "Hammerstorm",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "carry support",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Hammerstorm.webp"
+    },
+    {
+      "Name": "Jeraziah",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid support",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Jeraziah.webp"
+    },
+    {
+      "Name": "Accursed",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "carry support",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Accursed.webp"
+    },
+    {
+      "Name": "Amun-Ra",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "carry solo jungler",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Amun-Ra.webp"
+    },
+    {
+      "Name": "Balphagore",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid solo pusher",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "hard",
+      "ImagePath": "/images/hero_icons/Balphagore.webp"
+    },
+    {
+      "Name": "Cthulhuphant",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "solo offlane",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Cthulhuphant.webp"
+    },
+    {
+      "Name": "Deadwood",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Deadwood.webp"
+    },
+    {
+      "Name": "Devourer",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Devourer.webp"
+    },
+    {
+      "Name": "Keeper of the Forest",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "jungler pusher",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Keeper_of_the_Forest.webp"
+    },
+    {
+      "Name": "Legionnaire",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "jungler initiator",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Legionnaire.webp"
+    },
+    {
+      "Name": "Magebane",
+      "Gender": "male",
+      "Attribute": "agility",
+      "Role": "carry",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Magebane.webp"
+    },
+    {
+      "Name": "Pandamonium",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid carry",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "hard",
+      "ImagePath": "/images/hero_icons/Pandamonium.webp"
+    },
+    {
+      "Name": "Pebbles",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Pebbles.webp"
+    },
+    {
+      "Name": "Predator",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "carry",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Predator.webp"
+    },
+    {
+      "Name": "Rampage",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "offlane",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Rampage.webp"
+    },
+    {
+      "Name": "Electrician",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid offlane",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Electrician.webp"
+    },
+    {
+      "Name": "Gauntlet",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid offlane",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Gauntlet.webp"
+    },
+    {
+      "Name": "Kraken",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid offlane initiator",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Kraken.webp"
+    },
+    {
+      "Name": "Lord Salforis",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid offlane",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Lord_Salforis.webp"
+    },
+    {
+      "Name": "Magmus",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid offlane initiator",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Magmus.webp"
+    },
+    {
+      "Name": "Salomon",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "carry jungle",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Salomon.webp"
+    },
+    {
+      "Name": "Solstice",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "jungle",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Solstice.webp"
+    },
+    {
+      "Name": "Tundra",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid offlane",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Tundra.webp"
+    },
+    {
+      "Name": "The Gladiator",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid",
+      "Side": "legion",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/The_Gladiator.webp"
+    },
+    {
+      "Name": "Maliken",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "carry",
+      "Side": "hellbourne",
+      "RangeType": "melee ranged",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Maliken.webp"
+    },
+    {
+      "Name": "Moraxus",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "offlane initiator",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Moraxus.webp"
+    },
+    {
+      "Name": "Pestilence",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "offlane initiator",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "easy",
+      "ImagePath": "/images/hero_icons/Pestilence.webp"
+    },
+    {
+      "Name": "Pharaoh",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "mid offlane initiator",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "medium",
+      "ImagePath": "/images/hero_icons/Pharaoh.webp"
+    },
+    {
+      "Name": "War Beast",
+      "Gender": "male",
+      "Attribute": "strength",
+      "Role": "jungle",
+      "Side": "hellbourne",
+      "RangeType": "melee",
+      "Complexity": "hard",
+      "ImagePath": "/images/hero_icons/War_Beast.webp"
     }
+
+
+
+    
+
+    
+
+
+
+
   ]
