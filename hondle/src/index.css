@@ -85,13 +85,63 @@ code {
   overflow-y: auto;
 }
 
-
 .custom-dropdown-item.custom-dropdown-item:hover {
-  background-color: #31363b; /* Change this to your desired hover color */
-  color: #ffffff; /* Change this to your desired text color on hover */
+  background-color: #31363b; 
+  color: #ffffff; 
 }
 
 .hon-logo {
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.properties-card {
+  background: #00e46999;
+  border: 2px solid #24d475;
+  transition: background-color 0.3s ease;
+  flex-basis: calc(12.5% - 4px);
+}
+
+.properties-card.success {
+  background-color: #00e46999;
+  border-color: #24d475;
+}
+
+.properties-card.success:hover {
+  background: #0cff7eaf;
+}
+
+.properties-card.partial {
+  background-color: #d9c827b2;
+  border-color: #f3e033;
+}
+
+.properties-card.partial:hover {
+  background: #f3e033e0;
+}
+
+.properties-card.fail {
+  background-color: #ff373799;
+  border-color: #ff3737;
+}
+
+.properties-card.fail:hover {
+  background: #ff4141cf;
+}
+
+.properties-card-content {
+  color: white;
+  padding-left: 6px;
+  padding-right: 6px;
+  width: 100%;
+  height: 100%;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: default;
+  text-shadow: 0 0 3px #000;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.4392156862745098);
 }
