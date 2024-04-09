@@ -8,11 +8,11 @@ const InfoBox = ({ guesses, message, finished }:{
 }) => {
     return (
         <div className="info-box">
-            Number of guesses: {guesses}
+            Number of guesses: <p style={{ color: "#f3e033" }}>{guesses}</p>
             {message}
             {finished && (
                 <>
-                    <div>Congratulations! You've won!</div>
+                    <div style={{ color: "#24d475" }}>Congratulations! You've won!</div>
                     <TimeUntilNextDay />
                 </>
             )}
