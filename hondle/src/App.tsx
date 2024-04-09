@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import heroesData from './heroes.json'
@@ -7,6 +7,7 @@ import PropertiesRow from './components/PropertiesRow';
 import PropertiesHeader from './components/PropertiesHeader';
 import InfoBox from './components/InfoBox';
 import Button from 'react-bootstrap/Button';
+import { getHeroOfTheDay } from './helpers/TimerHashFunction';
 
 
 export type Hero = {
@@ -22,6 +23,7 @@ export type Hero = {
 
 const heroes: Hero[] = heroesData.map((hero) => ({
   ...hero,
+  Gender: hero.Gender as Hero['Gender'],
   Attribute: hero.Attribute as Hero['Attribute'], // Asserting the correct type for Attribute
   Role: hero.Role as Hero['Role'], // Asserting the correct type for Role
   Side: hero.Side as Hero['Side'], // Asserting the correct type for Side
@@ -38,10 +40,6 @@ const generateRandomHero = (): Hero => {
   return heroes[randomIndex];
 };
 const App = () => {
-  useEffect(() => {
-    document.body.style.backgroundColor = '#212529';
-  })
-  const [targetHero, setTargetHero] = useState(generateRandomHero());
   const [guess, setGuess] = useState('');
   const [feedback, setFeedback] = useState('');
   const [guessHistory, setGuessHistory] = useState<Hero[]>([]);
@@ -49,6 +47,10 @@ const App = () => {
   const [inputValue, setInputValue] = useState("");
   const [numOfGuesses, setNumOfGuesses] = useState<number>(0);
   const [wonGame, setWonGame] = useState<boolean>(false);
+  const targetHero = useRef({} as Hero);
+   useEffect(() => {
+    targetHero.current = getHeroOfTheDay(new Date(), heroes)
+  },[])
 
   const handleGuessChange = (value: string) => {
     const searchTerm = value.trim();
@@ -73,26 +75,15 @@ const App = () => {
 
     incrementGuesses();
   
-    const isCorrect = guessedHeroObject.Name.toUpperCase() === targetHero.Name.toUpperCase();
+    const isCorrect = guessedHeroObject.Name.toUpperCase() === targetHero.current.Name.toUpperCase();
     const updatedGuessHistory = [...guessHistory, guessedHeroObject];
     setGuessHistory(updatedGuessHistory);
   
     if (isCorrect) {
-      setFeedback('Congratulations! You guessed the hero correctly!');
       setWonGame(true);
     } else {
-      setFeedback('Sorry, that\'s not the correct hero.');
       setGuessedHistoryList(remainingHeroes.filter(item => item.Name !== guess));
     }
-  };
-
-  const handleNewGame = () => {
-    setTargetHero(generateRandomHero());
-    setGuess('');
-    setFeedback('');
-    setGuessHistory([]);
-    setGuessedHistoryList(heroes);
-    handleInputReset();
   };
 
 const handleInputReset = () => {
@@ -111,37 +102,12 @@ const incrementGuesses = () => {
             <div className="hero-searchbar">
               <HeroSearchBar onSelect={handleGuessChange} value={inputValue} setValue={setInputValue} heroes={remainingHeroes}></HeroSearchBar>
             </div>
-            <Button className="btn my-3" variant="success" type="submit" onClick={handleInputReset}>Guess</Button>
+            <Button disabled={wonGame} className="btn my-3" variant="success" type="submit" onClick={handleInputReset}>Guess</Button>
           </form>
           <InfoBox guesses={numOfGuesses} finished={wonGame}></InfoBox>
-      {/* <div className="card">
-          {feedback && <p>{feedback}</p>}
-          <div className="hero-history">
-            <div className="hero-history-line">
-              <div className='hero-history-box'>HERO</div>
-              <div className='hero-history-box'>RANGE TYPE</div>
-              <div className='hero-history-box'>ATTRIBUTE</div>
-              <div className='hero-history-box'>COMPLEXITY</div>
-            </div>
-            {guessHistory.map((hero, index) => (
-              <div key={index} className="hero-history-line">
-                <img src={hero.ImagePath} alt={hero.Name} className='hero-history-box'/>
-                <div className='hero-history-box'>{hero.RangeType.toUpperCase()}</div>
-                <div className='hero-history-box'>{hero.Attribute.toUpperCase()}</div>
-                <div className='hero-history-box'>{hero.Complexity.toUpperCase()}</div>
-              </div>
-            ))}
-          </div>
-          <div>
-            <h2>Target Hero:</h2>
-            <p>Name: {targetHero.Name}</p>
-            <p>Range: {targetHero.RangeType}</p>
-          </div>
-          <button onClick={handleNewGame}>New Game</button>
-        </div> */}
         <PropertiesHeader></PropertiesHeader>
         {guessHistory.map((hero, index) => (
-          <PropertiesRow key={index} hero={hero} targetHero={targetHero}></PropertiesRow>
+          <PropertiesRow key={index} hero={hero} targetHero={targetHero.current}></PropertiesRow>
         ))}
       </div>
     </div>
