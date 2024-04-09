@@ -3,12 +3,13 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import heroesData from './heroes.json'
 import HeroSearchBar from './components/HeroSearchBar';
-import PropertiesCard from './components/PropertiesCard';
+import PropertiesRow from './components/PropertiesRow';
 import Button from 'react-bootstrap/Button';
 import { Serializer } from 'v8';
 
 export type Hero = {
   Name: string,
+  Gender: string,
   Attribute: string,
   Role: string,
   Side: string,
@@ -46,7 +47,6 @@ const App = () => {
   const [inputValue, setInputValue] = useState("");
 
   const handleGuessChange = (value: string) => {
-    console.log(value)
     const searchTerm = value.trim();
     setGuess(searchTerm);
   };
@@ -127,6 +127,9 @@ const handleInputReset = () => {
           </div>
           <button onClick={handleNewGame}>New Game</button>
         </div>
+        {guessHistory.map((hero, index) => (
+          <PropertiesRow key={index} hero={hero} targetHero={targetHero}></PropertiesRow>
+        ))}
       </div>
     </div>
   );

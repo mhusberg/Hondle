@@ -36,6 +36,12 @@ code {
   margin-left: 40%;
 }
 
+.hero-img-row {
+  height: 84px;
+  width: 84px;
+  margin-right: 4px;
+}
+
 .hero-img-search {
   height: 40px;
   width: 40px;
@@ -99,7 +105,8 @@ code {
   background: #00e46999;
   border: 2px solid #24d475;
   transition: background-color 0.3s ease;
-  flex-basis: calc(12.5% - 4px);
+  width: 84px;
+  margin-right: 4px;
 }
 
 .properties-card.success {
@@ -131,8 +138,6 @@ code {
 
 .properties-card-content {
   color: white;
-  padding-left: 6px;
-  padding-right: 6px;
   width: 100%;
   height: 100%;
   padding-top: 0;
@@ -144,4 +149,11 @@ code {
   cursor: default;
   text-shadow: 0 0 3px #000;
   box-shadow: inset 0 0 6px rgba(0,0,0,.4392156862745098);
+}
+
+.properties-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 25px;
 }
