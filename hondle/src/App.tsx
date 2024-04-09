@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import heroesData from './heroes.json'
 import HeroSearchBar from './components/HeroSearchBar';
+import PropertiesCard from './components/PropertiesCard';
 import Button from 'react-bootstrap/Button';
 import { Serializer } from 'v8';
 
