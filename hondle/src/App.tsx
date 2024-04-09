@@ -4,8 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import heroesData from './heroes.json'
 import HeroSearchBar from './components/HeroSearchBar';
 import PropertiesRow from './components/PropertiesRow';
+import PropertiesHeader from './components/PropertiesHeader';
+import InfoBox from './components/InfoBox';
 import Button from 'react-bootstrap/Button';
-import { Serializer } from 'v8';
+
 
 export type Hero = {
   Name: string,
@@ -45,6 +47,8 @@ const App = () => {
   const [guessHistory, setGuessHistory] = useState<Hero[]>([]);
   const [remainingHeroes, setGuessedHistoryList] = useState<Hero[]>(heroes);
   const [inputValue, setInputValue] = useState("");
+  const [numOfGuesses, setNumOfGuesses] = useState<number>(0);
+  const [wonGame, setWonGame] = useState<boolean>(false);
 
   const handleGuessChange = (value: string) => {
     const searchTerm = value.trim();
@@ -66,6 +70,8 @@ const App = () => {
       setFeedback("Already guessed this hero.")
       return;
     }
+
+    incrementGuesses();
   
     const isCorrect = guessedHeroObject.Name.toUpperCase() === targetHero.Name.toUpperCase();
     const updatedGuessHistory = [...guessHistory, guessedHeroObject];
@@ -73,6 +79,7 @@ const App = () => {
   
     if (isCorrect) {
       setFeedback('Congratulations! You guessed the hero correctly!');
+      setWonGame(true);
     } else {
       setFeedback('Sorry, that\'s not the correct hero.');
       setGuessedHistoryList(remainingHeroes.filter(item => item.Name !== guess));
@@ -92,6 +99,10 @@ const handleInputReset = () => {
   setInputValue("");
 };
 
+const incrementGuesses = () => {
+  setNumOfGuesses(prevCount => prevCount + 1);
+};
+
   return (
     <div className="bg">
       <div className="App">
@@ -102,7 +113,8 @@ const handleInputReset = () => {
             </div>
             <Button className="btn my-3" variant="success" type="submit" onClick={handleInputReset}>Guess</Button>
           </form>
-      <div className="card">
+          <InfoBox guesses={numOfGuesses} finished={wonGame}></InfoBox>
+      {/* <div className="card">
           {feedback && <p>{feedback}</p>}
           <div className="hero-history">
             <div className="hero-history-line">
@@ -126,7 +138,8 @@ const handleInputReset = () => {
             <p>Range: {targetHero.RangeType}</p>
           </div>
           <button onClick={handleNewGame}>New Game</button>
-        </div>
+        </div> */}
+        <PropertiesHeader></PropertiesHeader>
         {guessHistory.map((hero, index) => (
           <PropertiesRow key={index} hero={hero} targetHero={targetHero}></PropertiesRow>
         ))}

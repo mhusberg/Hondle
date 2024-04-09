@@ -22,7 +22,7 @@
     {
       "Name": "Engineer",
       "Gender": "male",
-      "Attribute": "agility",
+      "Attribute": "intelligence",
       "Role": "support initiator",
       "Side": "legion",
       "RangeType": "ranged",
