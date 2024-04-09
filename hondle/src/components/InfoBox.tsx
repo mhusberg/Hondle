@@ -1,4 +1,4 @@
-
+import TimeUntilNextDay from "./TimeUntilNextGame";
 
 const InfoBox = ({ guesses, message, finished }:{
     guesses?: number;
@@ -13,7 +13,7 @@ const InfoBox = ({ guesses, message, finished }:{
             {finished && (
                 <>
                     <div>Congratulations! You've won!</div>
-                    <div>Timer TBA</div>
+                    <TimeUntilNextDay />
                 </>
             )}
         </div>
