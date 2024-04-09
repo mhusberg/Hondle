@@ -35,17 +35,11 @@ const heroes: Hero[] = heroesData.map((hero) => ({
 // Sample list of heroes from Heroes of Newerth
 // const heroess = ['Accursed', 'Aluna', 'Arachna', 'Artillery', 'Balphagore', 'Behemoth', 'Blacksmith', 'Bombardier', 'Bramble', 'Bubbles', 'Cthulhuphant', 'Demented Shaman', 'Devourer', 'Doctor Repulsor', 'Draconis', 'Empath', 'Engineer', 'Fayde', 'Flux', 'Forsaken Archer', 'Gauntlet', 'Geomancer', 'Glacius', 'Gravekeeper', 'Gunblade', 'Hellbringer', 'Keeper of the Forest', 'Kinesis', 'Kraken', 'Lodestone', 'Lord Salforis', 'Magmus', 'Martyr', 'Master of Arms', 'Midas', 'Moon Queen', 'Monarch', 'Moraxus', 'Myrmidon', 'Nighthound', 'Nitro', 'Nomad', 'Oogie', 'Parallax', 'Pandamonium', 'Pebbles', 'Pharaoh', 'Plague Rider', 'Pollywog Priest', 'Predator', 'Puppet Master', 'Pyromancer', 'Rally', 'Ravenor', 'Revenant', 'Rhapsody', 'Sand Wraith', 'Scout', 'Silhouette', 'Sir Benzington', 'Soulstealer', 'Swiftblade', 'Tarot', 'Tempest', 'The Gladiator', 'The Madman', 'Thunderbringer', 'Tremble', 'Tundra', 'Valkyrie', 'Vindicator', 'Voodoo Jester', 'War Beast', 'Wildsoul', 'Witch Slayer', 'Zephyr'];
 
-const generateRandomHero = (): Hero => {
-  const randomIndex = Math.floor(Math.random() * heroes.length);
-  return heroes[randomIndex];
-};
 const App = () => {
   const [guess, setGuess] = useState('');
-  const [feedback, setFeedback] = useState('');
   const [guessHistory, setGuessHistory] = useState<Hero[]>([]);
   const [remainingHeroes, setGuessedHistoryList] = useState<Hero[]>(heroes);
   const [inputValue, setInputValue] = useState("");
-  const [numOfGuesses, setNumOfGuesses] = useState<number>(0);
   const [wonGame, setWonGame] = useState<boolean>(false);
   const targetHero = useRef({} as Hero);
    useEffect(() => {
@@ -63,18 +57,14 @@ const App = () => {
     const guessedHeroObject = heroes.find(hero => hero.Name.toLowerCase() === guessedHero.toLowerCase());
   
     if (!guessedHeroObject) {
-      setFeedback('Sorry, that hero was not found.');
       return;
     }
 
     const isHeroInGuessHistory = guessHistory.some(hero => hero.Name === guessedHeroObject.Name);
     if (isHeroInGuessHistory) {
-      setFeedback("Already guessed this hero.")
       return;
     }
 
-    incrementGuesses();
-  
     const isCorrect = guessedHeroObject.Name.toUpperCase() === targetHero.current.Name.toUpperCase();
     const updatedGuessHistory = [...guessHistory, guessedHeroObject];
     setGuessHistory(updatedGuessHistory);
@@ -90,10 +80,6 @@ const handleInputReset = () => {
   setInputValue("");
 };
 
-const incrementGuesses = () => {
-  setNumOfGuesses(prevCount => prevCount + 1);
-};
-
   return (
     <div className="bg">
       <div className="App">
@@ -104,7 +90,7 @@ const incrementGuesses = () => {
             </div>
             <Button disabled={wonGame} className="btn my-3" variant="success" type="submit" onClick={handleInputReset}>Guess</Button>
           </form>
-          <InfoBox guesses={numOfGuesses} finished={wonGame}></InfoBox>
+          <InfoBox guesses={guessHistory.length} finished={wonGame}></InfoBox>
         <PropertiesHeader></PropertiesHeader>
         {guessHistory.map((hero, index) => (
           <PropertiesRow key={index} hero={hero} targetHero={targetHero.current}></PropertiesRow>

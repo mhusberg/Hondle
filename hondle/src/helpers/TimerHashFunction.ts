@@ -6,6 +6,5 @@ export const getHeroOfTheDay = (date: Date, heroes: Hero[]) => {
     const year = date.getFullYear();
     const hash = day + month + year;
     const dayIndex = hash % heroes.length;
-    console.log(heroes[dayIndex]);
     return heroes[dayIndex];
   };
