@@ -1,6 +1,7 @@
 import PropertiesCard from '../components/PropertiesCard';
 import { Hero } from '../App';
 
+
 const PropertiesRow = ({hero, targetHero}:{
     hero: Hero;
     targetHero: Hero;
