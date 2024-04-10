@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 import { Hero } from '../App';
@@ -39,7 +39,7 @@ const HeroSearchBar = ({ onSelect, setValue, value, placeholder = "Search hero..
             onChange={handleChange}
             style={{ borderColor: "#343a40" }}
         />
-        <Dropdown show={filteredHeroList.length > 0 && filteredHeroList.length != heroes.length && showDropdown}>
+        <Dropdown show={filteredHeroList.length > 0 && filteredHeroList.length !== heroes.length && showDropdown}>
             <Dropdown.Menu className="bg-dark" style={{width: "100%"}}>
                 {filteredHeroList.map((hero, index) => (
                     <div key={index} className="custom-dropdown-item">

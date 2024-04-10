@@ -7,6 +7,7 @@ import PropertiesRow from './components/PropertiesRow';
 import PropertiesHeader from './components/PropertiesHeader';
 import InfoBox from './components/InfoBox';
 import Button from 'react-bootstrap/Button';
+import DisplayConfetti from './components/Confetti';
 import { getHeroOfTheDay } from './helpers/TimerHashFunction';
 
 
@@ -83,7 +84,8 @@ const handleInputReset = () => {
   return (
     <div className="bg">
       <div className="App">
-          <img className="hon-logo" src="./images/HoN_logo.png"></img>
+          <DisplayConfetti wonGame={wonGame}/>
+          <img className="hon-logo" alt="" src="./images/HoN_logo.png"></img>
           <form onSubmit={handleGuessSubmit}>
             <div className="hero-searchbar">
               <HeroSearchBar onSelect={handleGuessChange} value={inputValue} setValue={setInputValue} heroes={remainingHeroes}></HeroSearchBar>
