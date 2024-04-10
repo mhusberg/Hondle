@@ -2,15 +2,15 @@ import Confetti from 'react-confetti';
 import { useWindowSize } from '@react-hook/window-size';
 
 
-const DisplayConfetti = ({ numOfPieces = 2000, wonGame }:{
+const DisplayConfetti = ({ numOfPieces = 2000, run }:{
     numOfPieces?: number;
-    wonGame: boolean;
+    run: boolean;
 }) => {
     const [width, height] = useWindowSize();
 
     return (
         <div>
-            {wonGame && (
+            {run && (
                 <>
                     <Confetti 
                         width={width}

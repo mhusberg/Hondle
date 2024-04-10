@@ -84,7 +84,7 @@ const handleInputReset = () => {
   return (
     <div className="bg">
       <div className="App">
-          <DisplayConfetti wonGame={wonGame}/>
+          <DisplayConfetti run={wonGame}/>
           <img className="hon-logo" alt="" src="./images/HoN_logo.png"></img>
           <form onSubmit={handleGuessSubmit}>
             <div className="hero-searchbar">
