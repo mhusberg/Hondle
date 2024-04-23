@@ -1,6 +1,7 @@
 {
   "name": "hondle",
   "version": "0.1.0",
+  "homepage": "https://mhusberg.github.io/Hondle/",
   "private": true,
   "dependencies": {
     "@react-hook/window-size": "^3.1.1",
